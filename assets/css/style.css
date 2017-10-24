@@ -1,0 +1,18 @@
+/* ==== GENERAL ==== */
+body {
+  margin-top: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px; }
+
+/* ==== GLOBAL ==== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-weight: bold; }
+
+/*# sourceMappingURL=style.css.map */
