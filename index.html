@@ -1,32 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <title>Kirk Yuan</title>
-    <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="./assets/css/style.css" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
-    <link href="assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./assets/css/hover.css" rel="stylesheet" media="all">
 
-    <!-- Custom CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118896883-1"></script>
+    <script>    
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-118896883-1');</script>
+
+
+    <title>Kirk Yuan</title>
 
 </head>
 
 <body>
-    <div id="particles-js"></div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/particles.js"></script>
-    <script type="text/javascript" src="assets/js/app.js"></script>
+    <div class="header">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div> 
+    </div>
+
+    <section class="intro">
+        <div class="intro__text">
+            <h2>Hey! I'm Kirk</h2>
+            <p>I'm a Third Year Computer Science student, a 
+                Web Developer, Game Developer
+                and a Photographer
+        </div>
+        <div class="intro__profile">
+            <img src="assets/img/me.png">
+        </div>
+
+        <div class="parallax">
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2> Projects </h2>
+        <div class="projects__container">
+            <div class="item" onclick="location.href='https://github.com/JKirkYuan/Quest'">
+                <img src="assets/img/Quest.png" style="width:300px; height:200px;">
+                <h4>Quest Game</h4>
+                <p>
+                    Board game converted into a fully functional Unity game that supports singleplayer, online multiplayer and
+                    two AI difficulties.
+                </p>
+            </div>
+            <div class="item" onclick="location.href='../Legacy_Site/index.html'">
+                <img src="assets/img/LegacySite.png" style="width:300px; height:200px;">
+                <h4>Legacy Website</h4>
+                <p>
+                    The first iteration of my personal website! 
+                    I spent a lot of time learning HTML, CSS and Bootstrap to create this simple, responsive portfolio for my projects.
+                </p>
+            </div>
+            <div class="item" onclick="location.href='https://github.com/JKirkYuan/CleanYoutube'">
+                <img src="assets/img/YoutubeClone.png" style="width:320px; height:200px;">
+                <h4>React Youtube Clone</h4>
+                <p>
+                    A Youtube clone built using React. Created components like video details and video results and 
+                    watched the state of the searchbar to return videos.
+                </p>
+            </div>
+        </div>
+        <div class="projects__button__container">
+            <a href="https://github.com/JKirkYuan" data-title="All Projects"></a>
+        </div>
+    </section>
+
+    <footer class="contact">
+        <div class="contact__right">
+            <a class="contact__item" href="assets/Kirk_Resume.pdf">Resume</a>
+            <a class="contact__item" href="JKirkYuan@icloud.com">Email</a>
+            <a class="contact__item" href="https://github.com/JKirkYuan">Github</a>
+            <a class="contact__item" href="https://www.linkedin.com/in/jiatianyuan/">Linkedin</a>
+        </div>
+    </footer>
 </body>
 
-</html>
+<script>
+        // When the user scrolls the page, execute myFunction 
+    window.onscroll = function() {myFunction()};
+
+    function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
